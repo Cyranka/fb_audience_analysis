@@ -37,7 +37,9 @@ retrieve_report <- function(id_vector, name_vector, my_platform, excel_file){
                           "gender", "ideology","education", "sports",
                           "music", "media_markets", "donations", "csr_interests")
   
+  print("Writing report")
   writexl::write_xlsx(report_list, stringr::str_glue(excel_file, ".xlsx"))
   
-  return(my_list)
+  
+  return(report_list)
 }

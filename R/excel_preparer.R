@@ -145,7 +145,7 @@ excel_preparer <- function(excel_file){
   }
   
   ##Create ideology pivot
-  ideology <- function(excel_file){
+  ideology_pivot <- function(excel_file){
     x <- readxl::read_excel(excel_file, sheet = "ideology") %>%
       mutate(Count = as.numeric(Count)) %>%
       mutate(proportional = round(Count/sum(Count),3))
@@ -158,7 +158,7 @@ excel_preparer <- function(excel_file){
                      education_pivot(excel_file),
                      age_pivot(excel_file),
                      gender_pivot(excel_file),
-                     fix_ideology(excel_file))
+                     ideology_pivot(excel_file))
   
   final_list <- append(initial_list,pivot_list)
   names(final_list) <- c(sheets_to_read,

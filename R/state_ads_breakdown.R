@@ -77,6 +77,6 @@ state_ads_breakdown <- function(id_vector, name_vector, platform){
   )
   
   
-  print("State Data Fetched")
+  print("State data fetched")
   return(state_data_frame)
 }

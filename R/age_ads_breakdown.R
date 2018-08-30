@@ -2,7 +2,7 @@ age_ads_breakdown <- function(id_vector, name_vector, platform){
   
   suppressMessages(require(dplyr))
   
-  print("Fetching Age Data")
+  print("Fetching age data")
   
   age <- dplyr::tribble(
     ~Category, ~age_1, ~age_2,

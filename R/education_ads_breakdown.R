@@ -1,6 +1,8 @@
 education_ads_breakdown <- function(id_vector,name_vector, platform){
 
+  
   suppressMessages(library(dplyr))
+  print('Fetching education data')
   
   edu_df <- tribble(
     ~education_status, ~code,
@@ -20,10 +22,10 @@ education_ads_breakdown <- function(id_vector,name_vector, platform){
   )
   
   
-  education_vector <- sapply(1:nrow(education), 
+  education_vector <- sapply(1:nrow(edu_df), 
   function(i)fbad_reachestimate(targeting_spec = list(
     geo_locations = list(countries = 'US'),
-    education_statuses = education$code[i],
+    education_statuses = edu_df$code[i],
     publisher_platforms = platform,
     flexible_spec = list(
       list(interests = data.frame(
@@ -40,6 +42,6 @@ education_ads_breakdown <- function(id_vector,name_vector, platform){
   ) %>% arrange(desc(Count))
   
   
-  
+  print('Education data fetched')
   return(education_frame)
 }
