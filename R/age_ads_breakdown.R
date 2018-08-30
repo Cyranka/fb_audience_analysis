@@ -6,7 +6,7 @@ age_ads_breakdown <- function(id_vector, name_vector, platform){
   
   age <- dplyr::tribble(
     ~Category, ~age_1, ~age_2,
-    "13-18",13,17,
+    "13-17",13,17,
     "18-24",18,24,
     "25-29",25,29,
     "30-34",30,34,
