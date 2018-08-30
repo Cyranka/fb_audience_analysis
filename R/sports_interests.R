@@ -1,5 +1,9 @@
 major_sports <- function(id_vector, name_vector, platform){
 
+  suppressMessages(library(dplyr))
+  
+  print('Fetching sports data')
+  
   sports <-tribble( 
     ~id,~name,   
     "6003107902433","Soccer",    
@@ -53,6 +57,7 @@ major_sports <- function(id_vector, name_vector, platform){
   ) %>% inner_join(network) %>%
     mutate(difference = pct_total - pct_of_network) %>% arrange(desc(Count))
   
+  print('Sports data fetched')
   return(final_frame)
   
 }
