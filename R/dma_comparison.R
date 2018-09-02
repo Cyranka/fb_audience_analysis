@@ -1,3 +1,17 @@
+#' Creating DMA Comparison
+#'
+#' Function that creates a comparison between audience media market ranking and population media market ranking
+#' @param infile: .xlsx file containing the audience media market audience
+#' @param dma_file: .csv file where comparison will be written. Needs to include ".csv" extension
+#' @keywords DMA Comparison
+#' @export
+#' @examples
+#' dma_comparison("report_1.xlsx", "dma_comparison.csv")
+
+
+
+
+
 dma_comparison <- function(infile, dma_file){
   library(tidyverse)
   

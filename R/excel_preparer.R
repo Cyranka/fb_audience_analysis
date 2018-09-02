@@ -1,3 +1,13 @@
+#' FB audience media markets breakdown
+#'
+#' Function that creates pivot tables and make changes to a user generated report
+#' @param excel_file: a user created Facebook audience report
+#' @keywords excel, pivot, fb audience
+#' @export
+#' @examples
+#' excel_preparer("report_1.xlsx")
+
+
 excel_preparer <- function(excel_file){
   
   print("Starting data processing")

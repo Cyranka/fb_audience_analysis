@@ -1,3 +1,15 @@
+#' FB audience media markets breakdown
+#'
+#' Function that returns a data frame with the total audience for an interest in each of the top 50 media markets by population
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' dma_ads_breakdown("6003123299417", "Computer science", "facebook")
+
+
 dma_ads_breakdown <- function(id_vector, name_vector, platform){
   
   suppressMessages(library(dplyr))

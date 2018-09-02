@@ -1,3 +1,15 @@
+#' FB audience CSR breakdown
+#'
+#' Function that returns a data frame with the total overlap between a vector of interests and predefined CSR interests.
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' csr_interests("6003123299417", "Computer science", "facebook")
+
+
 csr_interests <- function(id_vector, name_vector, platform){
   
   suppressMessages(library(dplyr))

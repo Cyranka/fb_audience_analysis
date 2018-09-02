@@ -1,3 +1,15 @@
+#' FB audience income breakdown
+#'
+#' Function that returns a data frame with the total audience by income for a selected interest.
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' income_ads_breakdown("6003123299417", "Computer science", "facebook")
+
+
 income_ads_breakdown <- function(id_vector,name_vector, platform){
   
   suppressMessages(require(dplyr))

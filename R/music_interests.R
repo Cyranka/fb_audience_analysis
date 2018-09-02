@@ -1,3 +1,15 @@
+#' FB audience music breakdown
+#'
+#' Function that returns a data frame with the total audience for selected music genres.
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' music_genres("6003123299417", "Computer science", "facebook")
+
+
 music_genres <- function(id_vector, name_vector, platform){
   
   suppressMessages(library(dplyr))

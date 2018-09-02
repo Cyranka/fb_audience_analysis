@@ -1,3 +1,16 @@
+#' FB audience age breakdown
+#'
+#' Function that returns a data frame with the total audience by predefined brackets age for a selected interest.
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' age_ads_breakdown("6003123299417", "Computer science", "facebook")
+
+
+
 age_ads_breakdown <- function(id_vector, name_vector, platform){
   
   suppressMessages(require(dplyr))

@@ -1,3 +1,16 @@
+#' FB audience sports breakdown
+#'
+#' Function that returns a data frame with the total audience for selected major sports.
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' major_sports("6003123299417", "Computer science", "facebook")
+
+
+
 major_sports <- function(id_vector, name_vector, platform){
 
   suppressMessages(library(dplyr))
