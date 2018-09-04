@@ -14,7 +14,7 @@
 age_ads_breakdown <- function(id_vector, name_vector, platform){
   
   suppressMessages(require(dplyr))
-  
+  suppressMessages(require(jsonlite))  
   print("Fetching age data")
   
   age <- dplyr::tribble(
@@ -45,8 +45,7 @@ age_ads_breakdown <- function(id_vector, name_vector, platform){
   ))$users
   )
   
-  age_data_frame <- dplyr::tibble(Category = age$Category, Count = age_vector) %>%
-    mutate(age_vector = as.numeric(as.character(age_vector))) %>%
+  age_data_frame <- dplyr::tibble(Category = age$Category, Count = as.numeric(age_vector)) %>%
     magrittr::set_colnames(c("Age Category","Count"))
   
   
