@@ -2,7 +2,7 @@
 % Please edit documentation in R/excel_preparer.R
 \name{excel_preparer}
 \alias{excel_preparer}
-\title{FB audience media markets breakdown}
+\title{Create pivot tables for FB audience report}
 \usage{
 excel_preparer(excel_file)
 }

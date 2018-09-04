@@ -1,4 +1,4 @@
-#' FB audience media markets breakdown
+#' Create pivot tables for FB audience report 
 #'
 #' Function that creates pivot tables and make changes to a user generated report
 #' @param excel_file: a user created Facebook audience report
