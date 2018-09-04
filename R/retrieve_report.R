@@ -8,7 +8,7 @@
 #' @keywords FB ads audience
 #' @export
 #' @examples
-#' dma_ads_breakdown("6003123299417", "Computer science", "facebook", "computer_science")
+#' retrieve_report("6003123299417", "Computer science", "facebook", "computer_science")
 
 
 

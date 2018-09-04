@@ -19,7 +19,7 @@ retrieve_report(id_vector, name_vector, my_platform, excel_file)
 Function that provides a wrapper for most the audience functions and writes an .xlsx report with the data
 }
 \examples{
-dma_ads_breakdown("6003123299417", "Computer science", "facebook", "computer_science")
+retrieve_report("6003123299417", "Computer science", "facebook", "computer_science")
 }
 \keyword{FB}
 \keyword{ads}
