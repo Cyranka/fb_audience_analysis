@@ -1,3 +1,17 @@
+#' FB audience generate .xlsx report
+#'
+#' Function that provides a wrapper for most the audience functions and writes an .xlsx report with the data
+#' @param id_vector: Vector of one or more facebook API interests
+#' @param name_vector: Vector of one or more facebook API names
+#' @param platform: "instagram", "facebook" or c("facebook", "instagram")
+#' @param excel_file: An excel file name, adding ".xlsx" extension is not necessary
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' dma_ads_breakdown("6003123299417", "Computer science", "facebook", "computer_science")
+
+
+
 retrieve_report <- function(id_vector, name_vector, my_platform, excel_file){
   options(stringsAsFactors = FALSE)
   options(scipen = 999)
