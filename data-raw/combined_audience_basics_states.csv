@@ -1,0 +1,51 @@
+"state","Abbreviation","Region","Count"
+"Connecticut","CT","Northeast",2300000
+"Maine","ME","Northeast",930000
+"Massachusetts","MA","Northeast",4700000
+"New Hampshire","NH","Northeast",880000
+"Rhode Island","RI","Northeast",750000
+"Vermont","VT","Northeast",410000
+"Delaware","DE","Northeast",600000
+"Maryland","MD","Northeast",3900000
+"New Jersey","NJ","Northeast",6100000
+"New York","NY","Northeast",15000000
+"Pennsylvania","PA","Northeast",8300000
+"Alabama","AL","South",3400000
+"Arkansas","AR","South",2000000
+"Florida","FL","South",15000000
+"Georgia","GA","South",7300000
+"Kentucky","KY","South",3000000
+"Louisiana","LA","South",3100000
+"Mississippi","MS","South",2200000
+"Missouri","MO","Midwest",4200000
+"North Carolina","NC","South",7000000
+"South Carolina","SC","South",3400000
+"Tennessee","TN","South",4700000
+"Virginia","VA","South",5400000
+"West Virginia","WV","South",1200000
+"Arizona","AZ","Southwest",4600000
+"New Mexico","NM","Southwest",1300000
+"Oklahoma","OK","Southwest",2700000
+"Texas","TX","Southwest",20000000
+"Illinois","IL","Midwest",8900000
+"Indiana","IN","Midwest",4400000
+"Iowa","IA","Midwest",2100000
+"Kansas","KS","Midwest",1900000
+"Michigan","MI","Midwest",6600000
+"Minnesota","MN","Midwest",3600000
+"Nebraska","NE","Midwest",1300000
+"North Dakota","ND","Midwest",500000
+"Ohio","OH","Midwest",7800000
+"South Dakota","SD","Midwest",550000
+"Wisconsin","WI","Midwest",3700000
+"Alaska","AK","Western Overseas",530000
+"California","CA","West",28000000
+"Colorado","CO","West",3800000
+"Hawaii","HI","Western Overseas",980000
+"Idaho","ID","West",1100000
+"Montana","MT","West",660000
+"Nevada","NV","West",2100000
+"Oregon","OR","West",2900000
+"Utah","UT","West",2100000
+"Washington","WA","West",5100000
+"Wyoming","WY","West",370000
