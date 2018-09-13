@@ -57,7 +57,7 @@ affinity_ads_breakdown <- function(id_vector, name_vector, platform){
   affinity_df <- tibble(
     `Ethnic/Cultural Group` = c("Asian-Americans","African-Americans","Hispanics", "Whites"),
     Count = as.numeric(race_counts)
-  ) %>% mutate(percent = Count/sum(Count))
+  ) %>% mutate(proportional = Count/sum(Count))
 
   affinity_df <- affinity_df[c(4,2,3,1),]
   

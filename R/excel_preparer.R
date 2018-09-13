@@ -150,7 +150,7 @@ excel_preparer <- function(excel_file){
   gender_pivot <- function(excel_file){
     x <- readxl::read_excel(excel_file, sheet = "gender") %>%
       mutate(Count = as.numeric(Count)) %>%
-      mutate(percent = round(Count/sum(Count),3))
+      mutate(proportional = round(Count/sum(Count),3))
     return(x)
   }
   
