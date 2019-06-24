@@ -71,7 +71,7 @@ dma_ads_breakdown <- function(id_vector, name_vector, platform){
   
   
   dma_counts <- sapply(1:nrow(dma), function(i){
-    Sys.sleep(1)
+    Sys.sleep(5)
     fbad_reachestimate(targeting_spec = list(
       geo_locations = list(geo_markets =data.frame(key = as.character(dma$dma_code[i]))),
       publisher_platforms = platform,
