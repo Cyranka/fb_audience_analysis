@@ -19,17 +19,15 @@ excel_preparer <- function(excel_file){
   
   ##Create income pivot
   income_pivot <- function(excel_file){
-    income_categories <- c("Under 50K","50K - 75K", "75K - 100K",
-                           "100K - 150K", "100K - 150K","Over 150K","Over 150K","Over 150K","Over 150K")
-    
-    y <- readxl::read_excel(excel_file, sheet = "income") %>% 
-                      filter(Bracket !="0. $30,000 - $39,999") %>%
-      mutate(income_categories = income_categories) %>% 
-      group_by(income_categories) %>%
-      summarise(Count = sum(Count)) %>% 
-      mutate(income_categories = factor(income_categories,
-             levels = c("Under 50K", "50K - 75K","75K - 100K","100K - 150K","Over 150K"))) %>% ungroup() %>%
-      arrange(income_categories) %>% mutate(proportional = round(Count/sum(Count),3))
+    y <- readxl::read_excel(excel_file, sheet = "income")%>%
+      mutate(Bracket = factor(Bracket,
+             levels = c("Below 50% of ZIP codes",
+              "Top 25%-50% of ZIP codes",
+              "Top 10%-25% of ZIP codes",
+              "Top 10% of ZIP codes",
+              "Top 5% of ZIP codes") %>%
+             )) %>% ungroup() %>%
+      arrange(Bracket) %>% mutate(proportional = round(Count/sum(Count),3))
     return(y)
   }
   
