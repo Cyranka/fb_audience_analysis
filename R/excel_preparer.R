@@ -25,9 +25,10 @@ excel_preparer <- function(excel_file){
               "Top 25%-50% of ZIP codes",
               "Top 10%-25% of ZIP codes",
               "Top 10% of ZIP codes",
-              "Top 5% of ZIP codes") %>%
-             )) %>% ungroup() %>%
-      arrange(Bracket) %>% mutate(proportional = round(Count/sum(Count),3))
+              "Top 5% of ZIP codes"))) %>%
+              ungroup() %>% arrange(Bracket) %>% 
+               mutate(proportional = round(Count/sum(Count),3))
+             
     return(y)
   }
   
