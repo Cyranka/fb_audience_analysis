@@ -16,12 +16,15 @@ csr_interests <- function(id_vector, name_vector, platform){
   print('Fetching CSR data')
   
   csr <-tribble( 
-    ~id,~name, 
-    "1232909720088602","Black lives matter",
-    "6003899280466" ,"Women's rights",
-    "6002898215362" ,"Bernie Sanders",
-    "6003970975896" ,"Environmentalism",
-    "6003204938561" ,"Elizabeth Warren"
+    ~name,~id, 
+    "Environmentalism", "6003970975896",
+    "Sustainability", "6003172273055",
+    "Charity", "6003422719241",
+    "Politics" ,"6003654559478",
+    "Community issues", "6003049202156",
+    "Religion", "6003395353671",
+    "Veterans","6003280740901",
+    "Volunteering", "6003137105590"
   )
   
 

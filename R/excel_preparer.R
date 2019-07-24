@@ -49,6 +49,21 @@ excel_preparer <- function(excel_file){
     return(y)
   }
   
+  age_raw <- function(excel_file){
+    y <- readxl::read_excel(excel_file, sheet = "age") %>% 
+      rename(age_categories = 1) %>% 
+      group_by(age_categories) %>%
+      summarise(Count = sum(Count)) %>% 
+      mutate(age_categories = factor(age_categories,
+                                     levels = c("13-17","18-24", "25-29","30-34",
+                                                "35-39","40-44","45-49","50-54",
+                                                "55-59", "Over 60"))) %>%
+      arrange(age_categories) %>% mutate(proportional = round(Count/sum(Count),3))
+    
+    return(y)
+  }
+  
+  
   ##Create education pivot
   education_pivot <- function(excel_file){
     
@@ -167,7 +182,8 @@ excel_preparer <- function(excel_file){
                      education_pivot(excel_file),
                      age_pivot(excel_file),
                      gender_pivot(excel_file),
-                     ideology_pivot(excel_file))
+                     ideology_pivot(excel_file),
+                     age_raw(excel_file))
   
   final_list <- append(initial_list,pivot_list)
   names(final_list) <- c(sheets_to_read,
@@ -177,7 +193,8 @@ excel_preparer <- function(excel_file){
                          "education_pivot2",
                          "age_pivot2",
                          "gender_fixed",
-                         "ideology_fixed")
+                         "ideology_fixed",
+                         "age_raw")
   writexl::write_xlsx(final_list,excel_file)
   return(cat("Data processed"))
 }
