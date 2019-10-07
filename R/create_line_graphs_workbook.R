@@ -132,6 +132,6 @@ function_for_line_graph <- function(working_directory){
 } 
 
 #cat("Enter Working Directory: ")
-my_work_dir <- readline("Enter Working Directory: ")
+#my_work_dir <- readline("Enter Working Directory: ")
 
-function_for_line_graph(my_work_dir)
+#function_for_line_graph(my_work_dir)
