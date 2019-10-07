@@ -1,17 +1,27 @@
-remove(list =ls())
-options(stringsAsFactors = FALSE)
-options(scipen = 999)
+#' Create line graph
+#'
+#' Function that returns a data frame with the total audience by predefined brackets age for a selected interest.
+#' @name create_line_graph
+#' @param working_directory: Working directory
+#' @keywords FB ads audience
+#' @export
+#' @examples
+#' function_for_line_graph("/Users/user_1/Desktop")
 
-library(tidyverse)
-library(janitor)
-sheets_to_loop <- c("geo_pivot2","age_pivot2",
-                    "income_pivot2", "gender_fixed",
-                    "ideology_fixed","music", "sports",
-                    "csr_interests", "ethnicity",
-                    "education_pivot2","age_raw")
+
+
 
 function_for_line_graph <- function(working_directory){
   setwd(working_directory)
+  
+  library(tidyverse)
+  library(janitor)
+  sheets_to_loop <- c("geo_pivot2","age_pivot2",
+                      "income_pivot2", "gender_fixed",
+                      "ideology_fixed","music", "sports",
+                      "csr_interests", "ethnicity",
+                      "education_pivot2","age_raw")
+  
   list_of_names <- grep("\\.xlsx", list.files(), value = TRUE)
   list_of_names <- subset(list_of_names, list_of_names != "multiple_comparison.xlsx")
   fix_names <- stringr::str_to_title(gsub("_", " ",gsub("\\.xlsx", "", list_of_names)))

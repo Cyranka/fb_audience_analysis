@@ -1,6 +1,7 @@
 #' FB audience multi-cultural affinity breakdown
 #'
 #' Function that returns a data frame with the total audience for an interest by facebook defined multi-cultural affinity groups.
+#' @name affinity_ads_breakdown
 #' @param id_vector: Vector of one or more facebook API interests
 #' @param name_vector: Vector of one or more facebook API names
 #' @param platform: "instagram", "facebook" or c("facebook", "instagram")
